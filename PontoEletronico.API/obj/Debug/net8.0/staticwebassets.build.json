@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "lWsVSKuKsvqyoM+H8HxMJWcvNE3xDGjcS5OdGZBQWls=",
+  "Source": "PontoEletronico.API",
+  "BasePath": "_content/PontoEletronico.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

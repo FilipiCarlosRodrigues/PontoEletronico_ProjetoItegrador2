@@ -1,0 +1,55 @@
+﻿@page "/login"
+@using System.ComponentModel.DataAnnotations
+@inject NavigationManager Navigation
+@layout LoginLayout
+
+
+<div class="login-form-container">
+    <EditForm Model="@loginModel">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+        <h3>Login</h3>
+        <div class="mb-3">
+            <label for="username" class="form-label">Usuário</label>
+            <InputText id="username" class="form-control" @bind-Value="loginModel.Username" placeholder="Digite seu nome de usuario"/>
+            <ValidationMessage For="@(() => loginModel.Username)" />
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">Senha</label>
+            <InputText id="password" class="form-control" type="password" @bind-Value="loginModel.Password" placeholder="Digite sua senha" />
+            <ValidationMessage For="@(() => loginModel.Password)" />
+        </div>
+
+        <button type="submit" class="btn btn-primary botao-login">Entrar</button>
+    </EditForm>
+</div>
+@code {
+    private LoginModel loginModel = new();
+
+    // private async Task HandleLogin()
+    // {
+    //     Validação fictícia (substitua pela lógica real)
+    //     if (loginModel.Username == "admin" && loginModel.Password == "1234")
+    //     {
+    //         Redireciona para a página inicial (ou outra página)
+    //         Navigation.NavigateTo("/");
+    //     }
+    //     else
+    //     {
+    //         Mostre uma mensagem de erro
+    //         await Task.Yield();
+    //         Console.WriteLine("Credenciais inválidas.");
+    //     }
+    // }
+
+    public class LoginModel
+    {
+        [Required(ErrorMessage = "O campo Usuário é obrigatório.")]
+        public string Username { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "O campo Senha é obrigatório.")]
+        [MinLength(4, ErrorMessage = "A senha deve ter pelo menos 4 caracteres.")]
+        public string Password { get; set; } = string.Empty;
+    }
+}

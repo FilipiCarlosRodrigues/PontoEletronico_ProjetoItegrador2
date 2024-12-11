@@ -1,0 +1,6 @@
+@PontoEletronico_HostAddress = http://localhost:5198
+
+GET {{PontoEletronico_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,17 @@
+C:\Users\Usuario\source\repos\PontoEletronico\PontoEletronico.Dados\bin\Debug\net8.0\PontoEletronico.Dados.deps.json
+C:\Users\Usuario\source\repos\PontoEletronico\PontoEletronico.Dados\bin\Debug\net8.0\PontoEletronico.Dados.runtimeconfig.json
+C:\Users\Usuario\source\repos\PontoEletronico\PontoEletronico.Dados\bin\Debug\net8.0\PontoEletronico.Dados.dll
+C:\Users\Usuario\source\repos\PontoEletronico\PontoEletronico.Dados\bin\Debug\net8.0\PontoEletronico.Dados.pdb
+C:\Users\Usuario\source\repos\PontoEletronico\PontoEletronico.Dados\bin\Debug\net8.0\PontoEletronico.Modelos.dll
+C:\Users\Usuario\source\repos\PontoEletronico\PontoEletronico.Dados\bin\Debug\net8.0\PontoEletronico.Modelos.pdb
+C:\Users\Usuario\source\repos\PontoEletronico\PontoEletronico.Dados\obj\Debug\net8.0\PontoEletronico.Dados.csproj.AssemblyReference.cache
+C:\Users\Usuario\source\repos\PontoEletronico\PontoEletronico.Dados\obj\Debug\net8.0\PontoEletronico.Dados.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\source\repos\PontoEletronico\PontoEletronico.Dados\obj\Debug\net8.0\PontoEletronico.Dados.AssemblyInfoInputs.cache
+C:\Users\Usuario\source\repos\PontoEletronico\PontoEletronico.Dados\obj\Debug\net8.0\PontoEletronico.Dados.AssemblyInfo.cs
+C:\Users\Usuario\source\repos\PontoEletronico\PontoEletronico.Dados\obj\Debug\net8.0\PontoEletronico.Dados.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\PontoEletronico\PontoEletronico.Dados\obj\Debug\net8.0\PontoEle.BFAD623E.Up2Date
+C:\Users\Usuario\source\repos\PontoEletronico\PontoEletronico.Dados\obj\Debug\net8.0\PontoEletronico.Dados.dll
+C:\Users\Usuario\source\repos\PontoEletronico\PontoEletronico.Dados\obj\Debug\net8.0\refint\PontoEletronico.Dados.dll
+C:\Users\Usuario\source\repos\PontoEletronico\PontoEletronico.Dados\obj\Debug\net8.0\PontoEletronico.Dados.pdb
+C:\Users\Usuario\source\repos\PontoEletronico\PontoEletronico.Dados\obj\Debug\net8.0\PontoEletronico.Dados.genruntimeconfig.cache
+C:\Users\Usuario\source\repos\PontoEletronico\PontoEletronico.Dados\obj\Debug\net8.0\ref\PontoEletronico.Dados.dll

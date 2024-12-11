@@ -1,0 +1,59 @@
+﻿@page "/cadastrousuario"
+<h3>Cadastro de Usuário</h3>
+
+<EditForm Model="novoUsuario" OnValidSubmit="CadastrarUsuario">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="nome">Nome</label>
+        <InputText id="nome" class="form-control" @bind-Value="novoUsuario.Nome" />
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <InputText id="email" class="form-control" @bind-Value="novoUsuario.Email" type="email" />
+    </div>
+
+    <div class="form-group">
+        <label for="senha">Senha</label>
+        <InputText id="senha" class="form-control" @bind-Value="novoUsuario.Senha" type="password" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+</EditForm>
+
+@code {
+    private UsuarioDTO novoUsuario = new UsuarioDTO();
+
+    private async Task CadastrarUsuario()
+    {
+        // try
+        // {
+        //     Faz a chamada para o endpoint da API
+        //     var response = await Http.PostAsJsonAsync("api/usuario", novoUsuario);
+
+        //     if (response.IsSuccessStatusCode)
+        //     {
+        //         Exibe mensagem de sucesso ou redireciona
+        //         Console.WriteLine("Usuário cadastrado com sucesso!");
+        //     }
+        //     else
+        //     {
+        //         Exibe mensagem de erro
+        //         Console.WriteLine("Erro ao cadastrar o usuário.");
+        //     }
+        // }
+        // catch (Exception ex)
+        // {
+        //     Console.WriteLine($"Erro: {ex.Message}");
+        // }
+    }
+
+    public class UsuarioDTO
+    {
+        public string Nome { get; set; }
+        public string Email { get; set; }
+        public string Senha { get; set; }
+    }
+}
