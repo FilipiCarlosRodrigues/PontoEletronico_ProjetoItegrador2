@@ -1,0 +1,78 @@
+﻿@page "/relatorio"
+
+<MudPaper Class="pa-4">
+    <MudGrid>
+        <!-- Seleção de Datas -->
+        <MudItem xs="12" sm="6">
+            <MudDatePicker Label="Data Inicial"
+                           @bind-Date="dataInicial"
+                           OpenTo="OpenTo.Date"
+                           DisableToolbar="true"
+                           InputVariant="Variant.Outlined"
+                           Adornment="Adornment.End">
+            </MudDatePicker>
+        </MudItem>
+        <MudItem xs="12" sm="6">
+            <MudDatePicker Label="Data Final"
+                           @bind-Date="dataFinal"
+                           OpenTo="OpenTo.Date"
+                           DisableToolbar="true"
+                           InputVariant="Variant.Outlined"
+                           Adornment="Adornment.End">
+            </MudDatePicker>
+        </MudItem>
+    </MudGrid>
+
+    <!-- Botão para Gerar Relatório -->
+    <MudButton Class="mt-4" Variant="Variant.Filled" Color="Color.Primary" OnClick="GerarRelatorio">
+        Gerar Relatório
+    </MudButton>
+
+    <!-- Tabela de Dias -->
+    @if (diasEntreDatas != null && diasEntreDatas.Any())
+    {
+        <MudTable Items="diasEntreDatas" Class="mt-4">
+            <HeaderContent>
+                <MudTh>Dia</MudTh>
+            </HeaderContent>
+            <RowTemplate>
+                <MudTd DataLabel="Dia">@context</MudTd>
+            </RowTemplate>
+        </MudTable>
+    }
+    else if (relatorioGerado)
+    {
+        <MudText Class="mt-4" Color="Color.Error">Nenhum dia encontrado para o intervalo selecionado.</MudText>
+    }
+</MudPaper>
+
+@code {
+    private DateTime? dataInicial;
+    private DateTime? dataFinal;
+    private List<string> diasEntreDatas;
+    private bool relatorioGerado = false;
+
+    private void GerarRelatorio()
+    {
+        relatorioGerado = true;
+        diasEntreDatas = new List<string>();
+
+        // Validar se as datas foram preenchidas e estão corretas
+        if (!dataInicial.HasValue || !dataFinal.HasValue)
+        {
+            diasEntreDatas.Clear();
+            return;
+        }
+
+        if (dataInicial <= dataFinal)
+        {
+            DateTime dataAtual = dataInicial.Value;
+            while (dataAtual <= dataFinal.Value)
+            {
+                diasEntreDatas.Add(dataAtual.ToString("dd/MM/yyyy"));
+                dataAtual = dataAtual.AddDays(1);
+            }
+        }
+        StateHasChanged();
+    }
+}

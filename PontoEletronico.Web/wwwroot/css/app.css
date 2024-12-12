@@ -117,14 +117,56 @@ code {
 
 
 .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #F0BB78;
+    padding: 210px;
+    background-color: #2196F3;
+}
+
+.login-box {
+    width: 30%;
+    border: 1px solid #000000;
 }
 
 botao-login{
     align-items: center;
 
 }
+
+
+/*card*/
+
+.card {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card-tamanho{
+    width: 80vh;
+    display: flex; 
+    justify-content: center; 
+    align-items: center
+}
+
+/*Logo*/
+
+.logo{
+    width: 100px
+}
+
+
+/*card criarUsuario*/
+
+.card-cria-usuario {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.min-height {
+    margin-top: 7rem;
+}
+

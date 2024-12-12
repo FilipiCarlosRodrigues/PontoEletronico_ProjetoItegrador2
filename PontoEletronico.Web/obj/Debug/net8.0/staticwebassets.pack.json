@@ -13,6 +13,26 @@
       "PackagePath": "staticwebassets\\PontoEletronico.Web.styles.css"
     },
     {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\PontoEletronico\\PontoEletronico.Web\\wwwroot\\Images\\CMLogo.png",
+      "PackagePath": "staticwebassets\\Images\\CMLogo.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\PontoEletronico\\PontoEletronico.Web\\wwwroot\\Images\\CMLogoBranca.png",
+      "PackagePath": "staticwebassets\\Images\\CMLogoBranca.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\PontoEletronico\\PontoEletronico.Web\\wwwroot\\Images\\Logo.png",
+      "PackagePath": "staticwebassets\\Images\\Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\PontoEletronico\\PontoEletronico.Web\\wwwroot\\Images\\Logo2.png",
+      "PackagePath": "staticwebassets\\Images\\Logo2.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\PontoEletronico\\PontoEletronico.Web\\wwwroot\\Images\\Logo3.png",
+      "PackagePath": "staticwebassets\\Images\\Logo3.png"
+    },
+    {
       "Id": "C:\\Users\\Usuario\\source\\repos\\PontoEletronico\\PontoEletronico.Web\\wwwroot\\appsettings.json",
       "PackagePath": "staticwebassets\\appsettings.json"
     },

@@ -1,55 +1,55 @@
-﻿@page "/login"
+﻿@page "/"
 @using System.ComponentModel.DataAnnotations
-@inject NavigationManager Navigation
 @layout LoginLayout
 
+<EditForm Model="@model" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator />
 
-<div class="login-form-container">
-    <EditForm Model="@loginModel">
-        <DataAnnotationsValidator />
-        <ValidationSummary />
-        <h3>Login</h3>
-        <div class="mb-3">
-            <label for="username" class="form-label">Usuário</label>
-            <InputText id="username" class="form-control" @bind-Value="loginModel.Username" placeholder="Digite seu nome de usuario"/>
-            <ValidationMessage For="@(() => loginModel.Username)" />
-        </div>
+    <MudGrid Justify="Justify.Center" AlignItems="AlignItems.Center">
+        <MudItem xs="12" sm="7">
+            <MudCard>
+                <MudCardContent>
+                    <MudTextField Label="Usuario" Class="mt-3"
+                                  @bind-Value="model.Email" For="@(() => model.Email)" />
+                    <MudTextField Label="Senha" HelperText="Ditite sua senha" Class="mt-3"
+                                  @bind-Value="model.Password" For="@(() => model.Password)" InputType="InputType.Password" />
+                </MudCardContent>
+                <MudCardActions>
+                    <MudButton Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto" Href="@($"/Ponto")">Entrar</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+    </MudGrid>
+</EditForm>
 
-        <div class="mb-3">
-            <label for="password" class="form-label">Senha</label>
-            <InputText id="password" class="form-control" type="password" @bind-Value="loginModel.Password" placeholder="Digite sua senha" />
-            <ValidationMessage For="@(() => loginModel.Password)" />
-        </div>
 
-        <button type="submit" class="btn btn-primary botao-login">Entrar</button>
-    </EditForm>
-</div>
 @code {
-    private LoginModel loginModel = new();
-
-    // private async Task HandleLogin()
-    // {
-    //     Validação fictícia (substitua pela lógica real)
-    //     if (loginModel.Username == "admin" && loginModel.Password == "1234")
-    //     {
-    //         Redireciona para a página inicial (ou outra página)
-    //         Navigation.NavigateTo("/");
-    //     }
-    //     else
-    //     {
-    //         Mostre uma mensagem de erro
-    //         await Task.Yield();
-    //         Console.WriteLine("Credenciais inválidas.");
-    //     }
-    // }
-
-    public class LoginModel
+    RegisterAccountForm model = new RegisterAccountForm();
+    bool success;
+    public class RegisterAccountForm
     {
-        [Required(ErrorMessage = "O campo Usuário é obrigatório.")]
-        public string Username { get; set; } = string.Empty;
+        [Required]
+        [StringLength(8, ErrorMessage = "Name length can't be more than 8.")]
+        public string Username { get; set; }
 
-        [Required(ErrorMessage = "O campo Senha é obrigatório.")]
-        [MinLength(4, ErrorMessage = "A senha deve ter pelo menos 4 caracteres.")]
-        public string Password { get; set; } = string.Empty;
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
+
+        [Required]
+        [StringLength(30, ErrorMessage = "Password must be at least 8 characters long.", MinimumLength = 8)]
+        public string Password { get; set; }
+
+        [Required]
+        [Compare(nameof(Password))]
+        public string Password2 { get; set; }
+
     }
+
+    private void OnValidSubmit(EditContext context)
+    {
+        success = true;
+        StateHasChanged();
+    }
+
 }

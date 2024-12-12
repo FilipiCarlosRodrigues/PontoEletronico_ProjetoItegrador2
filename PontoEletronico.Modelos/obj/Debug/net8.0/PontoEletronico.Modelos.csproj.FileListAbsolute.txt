@@ -9,3 +9,4 @@ C:\Users\Usuario\source\repos\PontoEletronico\PontoEletronico.Modelos\obj\Debug\
 C:\Users\Usuario\source\repos\PontoEletronico\PontoEletronico.Modelos\obj\Debug\net8.0\refint\PontoEletronico.Modelos.dll
 C:\Users\Usuario\source\repos\PontoEletronico\PontoEletronico.Modelos\obj\Debug\net8.0\PontoEletronico.Modelos.pdb
 C:\Users\Usuario\source\repos\PontoEletronico\PontoEletronico.Modelos\obj\Debug\net8.0\ref\PontoEletronico.Modelos.dll
+C:\Users\Usuario\source\repos\PontoEletronico\PontoEletronico.Modelos\obj\Debug\net8.0\PontoEletronico.Modelos.sourcelink.json

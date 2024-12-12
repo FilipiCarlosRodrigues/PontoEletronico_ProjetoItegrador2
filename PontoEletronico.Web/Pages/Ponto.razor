@@ -1,0 +1,46 @@
+﻿@page "/Ponto"
+@using System.Timers
+@inject IJSRuntime JSRuntime
+
+<div class="card">
+    <MudCard Class="card-tamanho">
+        <MudCardContent>
+            <MudText Typo="Typo.h4" Class="mb-2">@DateTime.Now.ToString("dd/MM/yyyy")</MudText>
+        </MudCardContent>
+        <MudCardContent>
+            <MudText Typo="Typo.h6" Class="mt-2">@DateTime.Now.ToString("dddd", new System.Globalization.CultureInfo("pt-BR"))</MudText>
+        </MudCardContent>
+        <MudCardContent>
+            <MudText Typo="Typo.h6" Class="mt-2">@currentTime.ToString("HH:mm:ss")</MudText>
+        </MudCardContent>
+
+        <MudCardActions>
+            <MudButton Variant="Variant.Filled" Color="Color.Secondary">Bater Ponto</MudButton>
+        </MudCardActions>
+    </MudCard>
+</div>
+
+@code {
+    private DateTime currentTime;
+    private Timer? timer;
+
+    protected override void OnInitialized()
+    {
+        currentTime = DateTime.Now; // Inicializa o horário atual
+        timer = new Timer(1000); // Intervalo de 1 segundo
+        timer.Elapsed += UpdateTime;
+        timer.Start();
+    }
+
+    private void UpdateTime(object sender, ElapsedEventArgs e)
+    {
+        currentTime = DateTime.Now;
+        InvokeAsync(StateHasChanged); // Atualiza a UI
+    }
+
+    public void Dispose()
+    {
+        timer?.Dispose(); // Libera o timer ao destruir o componente
+    }
+
+}

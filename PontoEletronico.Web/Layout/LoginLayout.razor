@@ -1,6 +1,13 @@
 ﻿@inherits LayoutComponentBase
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
 
-<div class="login-container">
-    @Body
-</div>
-
+ <MudAppBar Color="Color.Surface" Fixed="true" Elevation="2">
+    <MudImage Class="logo" Src="images/CMLogoBranca.png"></MudImage>
+    </MudAppBar>
+<MudLayout class="login-container">
+    <MudMainContent>
+        @Body
+    </MudMainContent>
+</MudLayout>

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PontoEletronico.Modelos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b6b903baa6f6d456040563a67fe72c8771c0a643")]
 [assembly: System.Reflection.AssemblyProductAttribute("PontoEletronico.Modelos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PontoEletronico.Modelos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
